@@ -1,28 +1,23 @@
 #include <iostream>
-#include <map>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 int main() {
-    int n;
-    cin >> n;
-    map<string, int> m;
+    int n, x, p;    // n: 人数, x: 転校生の身長 p: paizaの身長
+    cin >> n >> x >> p;
+    vector<int> v;
 
     for (int i = 0; i < n; i++) {
-        string name;
-        cin >> name;
-        m[name] = 0;
-    }   // 名前を読み込む
+        int tmp;
+        cin >> tmp;
+        v.push_back(tmp);
+    }   // 身長を読み込む
 
-    cin >> n;
-
-    for (int i = 0; i < n; i++) {
-        string name;
-        int damage;
-        cin >> name >> damage;
-        m[name] += damage;
-    }   // ダメージのデータを読み込む
-
-    for (auto x : m) {
-        cout << x.second << endl;
-    }
+    v.push_back(x);
+    v.push_back(p);
+    sort(v.begin(), v.end());
+    // paiza 君の身長を探す
+    auto it = find(v.begin(), v.end(), p);
+    cout << it - v.begin() + 1 << endl;
 }

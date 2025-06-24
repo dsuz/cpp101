@@ -9,4 +9,6 @@ add_executable(cpp main.cpp
         1-vector.cpp
         1-string.cpp
         1-forauto.cpp
-        2-map.cpp)
+        2-map.cpp
+        2-find.cpp
+        2-sort.cpp)
