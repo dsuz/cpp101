@@ -1,16 +1,28 @@
-// 文字列に一致しているか判定する
 #include <iostream>
+#include <map>
 using namespace std;
 
 int main() {
-    string greeting;
-    cin >> greeting;
+    int n;
+    cin >> n;
+    map<string, int> m;
 
-    if (greeting == "Hello") {
-        cout << "こんにちは" << endl;
-    } else if (greeting == "Morning") {
-        cout << "おはよう" << endl;
-    } else {
-        cout << "はじめまして" << endl;
+    for (int i = 0; i < n; i++) {
+        string name;
+        cin >> name;
+        m[name] = 0;
+    }   // 名前を読み込む
+
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        string name;
+        int damage;
+        cin >> name >> damage;
+        m[name] += damage;
+    }   // ダメージのデータを読み込む
+
+    for (auto x : m) {
+        cout << x.second << endl;
     }
 }

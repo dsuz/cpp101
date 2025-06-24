@@ -8,4 +8,5 @@ add_executable(cpp main.cpp
         paiza.cpp
         1-vector.cpp
         1-string.cpp
-        1-forauto.cpp)
+        1-forauto.cpp
+        2-map.cpp)
