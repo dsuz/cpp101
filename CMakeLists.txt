@@ -12,4 +12,5 @@ add_executable(cpp main.cpp
         2-map.cpp
         2-find.cpp
         2-sort.cpp
-        3-class.cpp)
+        3-class.cpp
+        4-pointer.cpp)
